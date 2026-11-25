@@ -1,0 +1,629 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+    --navy: #1e3a8a;
+    --blue: #3b82f6;
+    --sky: #a8d8ff;
+    --pale: #eff6ff;
+    --ink: #172554;
+    --muted: #64748b;
+    --white: #ffffff;
+    --line: #e2eaf7;
+    --shadow: 0 18px 45px rgba(30, 58, 138, .10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.65;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1120px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+/* NAVEGACIÓN */
+
+.site-header {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,.96);
+    border-bottom: 1px solid var(--line);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font: 800 21px 'Manrope', sans-serif;
+    color: var(--navy);
+}
+
+.brand span {
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.nav-links .nav-cta {
+    color: white;
+    background: var(--navy);
+    padding: 10px 19px;
+    border-radius: 9px;
+}
+
+/* PRESENTACIÓN */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        115deg,
+        #eff8ff 0%,
+        #ffffff 54%,
+        #e7f1ff 100%
+    );
+    padding: 92px 0 112px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 56px;
+}
+
+.eyebrow {
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+h1, h2, h3 {
+    font-family: 'Manrope', sans-serif;
+    line-height: 1.18;
+}
+
+h1 {
+    max-width: 590px;
+    font-size: clamp(38px, 5vw, 59px);
+    letter-spacing: -2.5px;
+    color: var(--navy);
+}
+
+h1 span {
+    color: var(--blue);
+}
+
+.hero-text {
+    max-width: 540px;
+    margin: 22px 0 28px;
+    color: #52627d;
+    font-size: 17px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 22px;
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: .2s;
+}
+
+.button-primary {
+    background: linear-gradient(135deg, var(--navy), var(--blue));
+    color: white;
+    box-shadow: 0 9px 22px rgba(30,58,138,.2);
+}
+
+.button-primary:hover {
+    transform: translateY(-2px);
+}
+
+.doctor {
+    margin-top: 27px;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.doctor span {
+    color: var(--muted);
+    font-weight: 400;
+}
+
+/* ILUSTRACIÓN CSS */
+
+.hero-art {
+    min-height: 360px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.art-circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-one {
+    width: 330px;
+    height: 330px;
+    background: rgba(168,216,255,.48);
+    right: 8%;
+    top: 0;
+}
+
+.circle-two {
+    width: 210px;
+    height: 210px;
+    background: rgba(59,130,246,.12);
+    left: 0;
+    bottom: 5px;
+}
+
+.medical-card {
+    width: min(390px, 90%);
+    min-height: 260px;
+    position: relative;
+    z-index: 1;
+    padding: 22px 25px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background: rgba(255,255,255,.9);
+    box-shadow: 0 24px 65px rgba(30,58,138,.16);
+    transform: rotate(2deg);
+}
+
+.card-top {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 17px;
+}
+
+.card-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #9fc9f7;
+}
+
+.card-label {
+    margin-left: auto;
+    color: #7183a3;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.cross {
+    width: 86px;
+    height: 86px;
+    display: grid;
+    place-items: center;
+    margin: 24px auto 14px;
+    border-radius: 24px;
+    color: white;
+    font-size: 65px;
+    background: linear-gradient(145deg, var(--blue), var(--navy));
+}
+
+.pulse-line {
+    height: 2px;
+    width: 75%;
+    margin: 0 auto;
+    background: #dbeafe;
+    position: relative;
+}
+
+.pulse-line span {
+    position: absolute;
+    left: 40%;
+    top: -8px;
+    width: 55px;
+    height: 17px;
+    border-top: 2px solid var(--blue);
+    border-right: 2px solid var(--blue);
+    transform: skew(-35deg);
+}
+
+.art-lines {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 22px;
+}
+
+.art-lines i {
+    display: block;
+    height: 6px;
+    width: 54px;
+    border-radius: 8px;
+    background: #dbeafe;
+}
+
+.art-lines i:nth-child(2) {
+    width: 82px;
+    background: #bfdbfe;
+}
+
+.card-bottom {
+    margin-top: 18px;
+    text-align: center;
+    color: #6b7b99;
+    font-size: 11px;
+}
+
+.floating-note {
+    position: absolute;
+    z-index: 2;
+    bottom: 18px;
+    right: -2px;
+    padding: 12px 16px;
+    border-radius: 11px;
+    background: white;
+    box-shadow: var(--shadow);
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.note-check {
+    display: inline-grid;
+    place-items: center;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    margin-right: 7px;
+    color: white;
+    background: #65a879;
+}
+
+/* SECCIONES GENERALES */
+
+.section {
+    padding: 88px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 42px;
+}
+
+.section-heading h2,
+.consultation-grid h2 {
+    color: var(--navy);
+    font-size: clamp(28px, 3vw, 38px);
+    letter-spacing: -1.1px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+    margin-top: 12px;
+}
+
+/* SERVICIOS */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.service-card {
+    padding: 26px 22px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: white;
+    box-shadow: 0 8px 28px rgba(30,58,138,.045);
+    transition: .2s;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 19px;
+    border-radius: 13px;
+    background: var(--pale);
+    color: var(--blue);
+    font-size: 29px;
+}
+
+.service-card h3 {
+    font-size: 16px;
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+/* CONSULTA */
+
+.consultation-section {
+    background: #f6f9ff;
+}
+
+.consultation-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.section-intro {
+    margin-top: 17px;
+    color: var(--muted);
+}
+
+.steps {
+    list-style: none;
+}
+
+.steps li {
+    display: flex;
+    gap: 20px;
+    padding: 0 0 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+}
+
+.steps li:last-child {
+    margin-bottom: 0;
+    border: 0;
+}
+
+.steps li > span {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #e1efff;
+    color: var(--blue);
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.steps h3 {
+    color: var(--navy);
+    font-size: 16px;
+    margin: 1px 0 5px;
+}
+
+.steps p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* CONTACTO */
+
+.contact-section {
+    padding: 58px 0;
+    color: white;
+    background: linear-gradient(115deg, #1e3a8a, #2857ad);
+}
+
+.contact-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.eyebrow-light {
+    color: #b9dcff;
+}
+
+.contact-inner h2 {
+    font-size: clamp(28px, 3vw, 38px);
+}
+
+.contact-inner > div:first-child > p:last-child {
+    color: #dbeafe;
+    margin-top: 12px;
+    max-width: 560px;
+    font-size: 14px;
+}
+
+.contact-detail {
+    min-width: 230px;
+    padding: 20px 24px;
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 13px;
+    background: rgba(255,255,255,.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-detail span {
+    color: #c7dafa;
+    font-size: 12px;
+}
+
+.contact-detail strong {
+    margin: 3px 0;
+    font-size: 17px;
+}
+
+/* PIE DE PÁGINA */
+
+.footer {
+    padding: 20px 0;
+    background: #172e6b;
+    color: #cbd8f1;
+    font-size: 11px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .hero-grid {
+        gap: 25px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .consultation-grid {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        width: min(100% - 34px, 520px);
+    }
+
+    .site-header {
+        height: 66px;
+    }
+
+    .nav-links {
+        gap: 13px;
+        font-size: 12px;
+    }
+
+    .nav-links a:first-child,
+    .nav-links a:nth-child(2) {
+        display: none;
+    }
+
+    .brand {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 65px 0 75px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .hero-art {
+        min-height: 300px;
+        margin-top: 12px;
+    }
+
+    .circle-one {
+        width: 260px;
+        height: 260px;
+    }
+
+    .medical-card {
+        min-height: 235px;
+    }
+
+    .floating-note {
+        right: 0;
+        bottom: 0;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .service-card {
+        display: grid;
+        grid-template-columns: 48px 1fr;
+        column-gap: 15px;
+        padding: 19px;
+    }
+
+    .service-icon {
+        grid-row: span 2;
+        margin: 0;
+    }
+
+    .service-card h3 {
+        align-self: end;
+    }
+
+    .consultation-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .contact-inner {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 7px;
+    }
+}
